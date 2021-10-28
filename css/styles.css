@@ -1,0 +1,310 @@
+.header {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+}
+
+.header__menuBurger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  margin-right: 32px;
+}
+
+.header__menuBurger_hidden {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  visibility: inherit;
+}
+
+.header__spanBurger {
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background-color: #FFFFFF;
+}
+
+.header__spanBurger:after, .header__spanBurger:before {
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background-color: #FFFFFF;
+  content: '';
+}
+
+.header__spanBurger:after {
+  bottom: 8px;
+}
+
+.header__spanBurger:before {
+  top: 8px;
+}
+
+.welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/DSC00015.jpg");
+  height: 100vh;
+  width: 100%;
+  right: 0;
+}
+
+.welcome__title {
+  margin: 0;
+  margin-top: 60px;
+  padding: 0;
+  font-family: 'Amatic SC', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 96px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.welcome__description {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.welcome__followArrow {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+  bottom: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.welcome__followArrow:before, .welcome__followArrow:after {
+  content: '';
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  -webkit-animation: followArrow 3s linear infinite;
+          animation: followArrow 3s linear infinite;
+}
+
+.welcome__followArrow:after {
+  -webkit-animation: followArrow 3s linear infinite -1.5s;
+          animation: followArrow 3s linear infinite -1.5s;
+}
+
+@-webkit-keyframes followArrow {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, -53px) rotate(-45deg);
+            transform: translate(0, -53px) rotate(-45deg);
+  }
+  10%, 90% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0) rotate(-45deg);
+            transform: translate(0, 0) rotate(-45deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0, 53px) rotate(-45deg);
+            transform: translate(0, 53px) rotate(-45deg);
+  }
+}
+
+@keyframes followArrow {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, -53px) rotate(-45deg);
+            transform: translate(0, -53px) rotate(-45deg);
+  }
+  10%, 90% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0) rotate(-45deg);
+            transform: translate(0, 0) rotate(-45deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0, 53px) rotate(-45deg);
+            transform: translate(0, 53px) rotate(-45deg);
+  }
+}
+
+.sightseens {
+  height: 100vh;
+  width: 100%;
+}
+
+.modalWindow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #111111;
+  color: #FFFFFF;
+  opacity: 0.8;
+  z-index: 5;
+  top: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.modalWindow--active {
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.modalWindow__closeButton {
+  width: 20px;
+  height: 20px;
+}
+
+.modalWindow__spanClose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: absolute;
+  margin: 0;
+  margin-right: 32px;
+  margin-bottom: 25px;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  right: 0;
+  bottom: 0;
+}
+
+.modalWindow__spanClose:before, .modalWindow__spanClose:after {
+  position: absolute;
+  content: ' ';
+  height: 25px;
+  width: 2px;
+  background-color: #FFFFFF;
+}
+
+.modalWindow__spanClose:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modalWindow__spanClose:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+}
+
+.nav__main {
+  margin: 0;
+  margin-top: 15px;
+  list-style-type: none;
+}
+
+.nav__sightseens {
+  margin: 0;
+  margin-top: 15px;
+  list-style-type: none;
+}
+
+.nav__tours {
+  margin: 0;
+  margin-top: 15px;
+  list-style-type: none;
+}
+
+.nav__contacts {
+  margin: 0;
+  margin-top: 15px;
+  list-style-type: none;
+}
+
+.nav__link {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.nav__link:active {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=styles.css.map */
