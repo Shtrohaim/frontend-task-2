@@ -35,6 +35,7 @@ const closeModalButton = document.querySelector('.modalWindow__closeButton');
 
   const smoothLinks = document.querySelectorAll('.nav__link[href^="#"]');
   const smoothFollowArrow = document.querySelector('.welcome__arrowLink[href^="#"]');
+  const smoothLogoLink = document.querySelector('.header__logoLink');
   for (let smoothLink of smoothLinks) {
       smoothLink.addEventListener('click', function (e) {
         let modalWindow = document.querySelector('.modalWindow');
@@ -60,6 +61,14 @@ const closeModalButton = document.querySelector('.modalWindow__closeButton');
         block: 'start'
     });
   })
+  smoothLogoLink.addEventListener('click', function(e){
+    e.preventDefault();
+    const id = smoothLogoLink.getAttribute('href');
+    document.querySelector(id).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+  })
 
   window.addEventListener('scroll', event => {
     let navigationLinks = document.querySelectorAll('.nav__link');
@@ -76,3 +85,17 @@ const closeModalButton = document.querySelector('.modalWindow__closeButton');
       }
     });
   });
+
+  ymaps.ready(function () { 
+ 
+    let myMap = new ymaps.Map("YMapsID", {
+        center: [53.72171920587809, 91.44213052668228],
+        zoom: 16,
+    });
+    let myPlacemark = new ymaps.Placemark([53.72171920587809, 91.44213052668228], {
+       content: 'Правительство республики Хакасии, Ленина просп., 67, Абакан, Респ. Хакасия, 655017',
+       balloonContent: 'Правительство республики Хакасии, Ленина просп., 67, Абакан, Респ. Хакасия, 655017',
+    });
+    myMap.geoObjects.add(myPlacemark);
+    
+});
