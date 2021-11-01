@@ -10,7 +10,6 @@ window.onscroll = function() {
 const openModalButton = document.querySelector('.header__menuBurger');
 const closeModalButton = document.querySelector('.modalWindow__closeButton');
 
-
   if(openModalButton){
     let modalWindow = document.querySelector('.modalWindow');
     let appBody = document.querySelector('.app');
@@ -99,3 +98,22 @@ const closeModalButton = document.querySelector('.modalWindow__closeButton');
     myMap.geoObjects.add(myPlacemark);
     
 });
+
+const showMoreTours = document.querySelector('.tours__showMore');
+const hideToursButton = document.querySelector('.tours__hideTours');
+if(showMoreTours){
+  let hiddenTours = document.querySelector('.tours--hidden');
+  showMoreTours.addEventListener('click', function(e){
+    hiddenTours.style.display = 'flex';
+    showMoreTours.style.display = 'none';
+    hideToursButton.style.display = 'block';
+ });
+}
+if(hideToursButton){
+  let hiddenTours = document.querySelector('.tours--hidden');
+  hideToursButton.addEventListener('click', function(e){
+    hiddenTours.style.display = 'none';
+    showMoreTours.style.display = 'block';
+    hideToursButton.style.display = 'none';
+ });
+}
