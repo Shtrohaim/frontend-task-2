@@ -29,6 +29,9 @@
   padding: 0;
   height: 43px;
   width: 48px;
+}
+
+.header__logoLink:focus {
   outline: 0;
   outline-offset: 0;
 }
@@ -90,7 +93,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   right: 0;
 }
@@ -147,6 +150,9 @@
   width: 32px;
   height: 32px;
   z-index: 4;
+}
+
+.welcome__arrowLink:focus {
   outline: 0;
   outline-offset: 0;
 }
@@ -262,7 +268,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  height: 33vh;
+  height: 33%;
   border-radius: 20px;
   -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
@@ -303,7 +309,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  height: 33vh;
+  height: 33%;
   border-radius: 20px;
   -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
@@ -344,7 +350,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  height: 33vh;
+  height: 33%;
   border-radius: 20px;
   -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
@@ -464,7 +470,7 @@
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
-  height: 40vh;
+  height: 40%;
   width: 90%;
 }
 
@@ -630,7 +636,7 @@
   margin-top: 20px;
   padding: 0;
   width: 100%;
-  height: 50vh;
+  height: 45vh;
 }
 
 .info {
