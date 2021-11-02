@@ -102,18 +102,31 @@ const closeModalButton = document.querySelector('.modalWindow__closeButton');
 const showMoreTours = document.querySelector('.tours__showMore');
 const hideToursButton = document.querySelector('.tours__hideTours');
 if(showMoreTours){
-  let hiddenTours = document.querySelector('.tours--hidden');
+  let hiddenTour3 = document.querySelector('.tour3');
+  let hiddenTour4 = document.querySelector('.tour4');
+  let hiddenTour5 = document.querySelector('.tour5');
+  let hiddenTour6 = document.querySelector('.tour6');
   showMoreTours.addEventListener('click', function(e){
-    hiddenTours.style.display = 'flex';
+    hiddenTour3.style.display = 'flex';
+    hiddenTour4.style.display = 'flex';
+    hiddenTour5.style.display = 'flex';
+    hiddenTour6.style.display = 'flex';
     showMoreTours.style.display = 'none';
     hideToursButton.style.display = 'block';
  });
 }
 if(hideToursButton){
-  let hiddenTours = document.querySelector('.tours--hidden');
+  let hiddenTour3 = document.querySelector('.tour3');
+  let hiddenTour4 = document.querySelector('.tour4');
+  let hiddenTour5 = document.querySelector('.tour5');
+  let hiddenTour6 = document.querySelector('.tour6');
   hideToursButton.addEventListener('click', function(e){
-    hiddenTours.style.display = 'none';
+    hiddenTour3.style.display = 'none';
+    hiddenTour4.style.display = 'none';
+    hiddenTour5.style.display = 'none';
+    hiddenTour6.style.display = 'none';
     showMoreTours.style.display = 'block';
     hideToursButton.style.display = 'none';
  });
 }
+

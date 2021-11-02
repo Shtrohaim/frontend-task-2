@@ -184,11 +184,11 @@
 
   &__title{
     margin: 0;
-    margin-top: 80px;
     margin-bottom: 30px;
     padding: 0;
+    padding-top: 80px;
     text-align: center;
-    font-family: Amatic SC;
+    font-family: 'Amatic SC';
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
@@ -327,14 +327,6 @@
   margin: 0;
   padding: 0;
 
-  &--hidden{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
   &__wrapper{
     display: flex;
     flex-direction: column;
@@ -344,9 +336,10 @@
 
   &__title{
     margin: 0;
-    margin-top: 80px;
     margin-bottom: 30px;
     padding: 0;
+    padding-top: 80px;
+    text-align: center;
     font-family: 'Amatic SC';
     font-style: normal;
     font-weight: 400;
@@ -484,6 +477,7 @@
   background-size: cover;
 }
 .tour3{
+  display: none;
   background-image: url('../img/DJI_0210\ 1.jpg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -491,18 +485,21 @@
   
 }
 .tour4{
+  display: none;
   background-image: url('../img/DJI_0210\ 1.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .tour5{
+  display: none;
   background-image: url('../img/DJI_0210\ 1.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .tour6{
+  display: none;
   background-image: url('../img/DJI_0210\ 1.jpg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -524,9 +521,9 @@
 
   &__title{
     margin: 0;
-    margin-top: 80px;
     margin-bottom: 20px;
     padding: 0;
+    padding-top: 80px;
     text-align: center;
     font-family: Amatic SC;
     font-style: normal;
