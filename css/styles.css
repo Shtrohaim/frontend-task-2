@@ -219,25 +219,46 @@
             align-items: center;
     margin: 0;
     padding: 0;
+    padding-left: 16px;
+    padding-right: 18px;
   }
   .sightseens__title {
     margin: 0;
-    margin-top: 80px;
     margin-bottom: 30px;
     padding: 0;
+    padding-top: 80px;
     text-align: center;
-    font-family: Amatic SC;
+    font-family: 'Amatic SC';
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
     color: #000000;
+  }
+  .firstSight {
+    margin: 0;
+    margin-bottom: 55px;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 11;
+    -webkit-box-orient: vertical;
+  }
+  .firstSight__info {
+    margin: 0;
+    padding: 0;
+    padding-left: 4px;
+    padding-right: 8px;
+  }
+  .firstSight--active {
+    display: block;
   }
   .firstSight__image {
     display: block;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
     height: 33%;
     border-radius: 20px;
     -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
@@ -245,9 +266,8 @@
   }
   .firstSight__title {
     margin: 0;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: 30px;
+    margin-top: 23px;
+    margin-bottom: 36px;
     padding: 0;
     font-family: 'Roboto';
     font-style: normal;
@@ -256,13 +276,10 @@
     text-decoration: underline;
     color: #585858;
   }
-  .firstSight__description {
+  .firstSight__description1 {
     margin: 0;
-    margin-left: 30px;
-    margin-right: 15px;
-    margin-bottom: 45px;
+    margin-bottom: 10px;
     padding: 0;
-    padding-right: 5px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 400;
@@ -270,12 +287,42 @@
     line-height: 16px;
     color: #000000;
   }
+  .firstSight__description2 {
+    margin: 0;
+    margin-right: 15px;
+    padding: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+  }
+  .secondSight {
+    margin: 0;
+    margin-bottom: 55px;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 11;
+    -webkit-box-orient: vertical;
+  }
+  .secondSight__info {
+    margin: 0;
+    padding: 0;
+    padding-left: 4px;
+    padding-right: 8px;
+  }
+  .secondSight--active {
+    display: block;
+  }
   .secondSight__image {
     display: block;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
     height: 33%;
     border-radius: 20px;
     -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
@@ -283,9 +330,8 @@
   }
   .secondSight__title {
     margin: 0;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: 30px;
+    margin-top: 23px;
+    margin-bottom: 36px;
     padding: 0;
     font-family: 'Roboto';
     font-style: normal;
@@ -294,13 +340,10 @@
     text-decoration: underline;
     color: #585858;
   }
-  .secondSight__description {
+  .secondSight__description1 {
     margin: 0;
-    margin-left: 30px;
-    margin-right: 15px;
-    margin-bottom: 45px;
+    margin-bottom: 10px;
     padding: 0;
-    padding-right: 5px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 400;
@@ -308,12 +351,41 @@
     line-height: 16px;
     color: #000000;
   }
+  .secondSight__description2 {
+    margin: 0;
+    margin-right: 15px;
+    padding: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+  }
+  .thirdSight {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 11;
+    -webkit-box-orient: vertical;
+  }
+  .thirdSight--active {
+    display: block;
+  }
+  .thirdSight__info {
+    margin: 0;
+    padding: 0;
+    padding-left: 4px;
+    padding-right: 8px;
+  }
   .thirdSight__image {
     display: block;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
     height: 33%;
     border-radius: 20px;
     -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
@@ -321,9 +393,8 @@
   }
   .thirdSight__title {
     margin: 0;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: 30px;
+    margin-top: 23px;
+    margin-bottom: 36px;
     padding: 0;
     font-family: 'Roboto';
     font-style: normal;
@@ -332,12 +403,21 @@
     text-decoration: underline;
     color: #585858;
   }
-  .thirdSight__description {
+  .thirdSight__description1 {
     margin: 0;
-    margin-left: 30px;
+    margin-bottom: 10px;
+    padding: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+  }
+  .thirdSight__description2 {
+    margin: 0;
     margin-right: 15px;
     padding: 0;
-    padding-right: 5px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 400;
@@ -350,20 +430,6 @@
     width: 100%;
     margin: 0;
     padding: 0;
-  }
-  .tours--hidden {
-    display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
   }
   .tours__wrapper {
     display: -webkit-box;
@@ -379,12 +445,17 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 0;
+    padding: 0;
+    padding-left: 16px;
+    padding-right: 18px;
   }
   .tours__title {
     margin: 0;
-    margin-top: 80px;
     margin-bottom: 30px;
     padding: 0;
+    padding-top: 80px;
+    text-align: center;
     font-family: 'Amatic SC';
     font-style: normal;
     font-weight: 400;
@@ -426,7 +497,7 @@
     margin-bottom: 20px;
     padding: 0;
     height: 40%;
-    width: 90%;
+    width: 100%;
   }
   .tour1__allInfo, .tour2__allInfo, .tour3__allInfo, .tour4__allInfo, .tour5__allInfo, .tour6__allInfo {
     margin: 0;
@@ -515,24 +586,28 @@
     background-size: cover;
   }
   .tour3 {
+    display: none;
     background-image: url("../img/DJI_0210 1.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
   }
   .tour4 {
+    display: none;
     background-image: url("../img/DJI_0210 1.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
   }
   .tour5 {
+    display: none;
     background-image: url("../img/DJI_0210 1.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
   }
   .tour6 {
+    display: none;
     background-image: url("../img/DJI_0210 1.jpg");
     background-repeat: no-repeat;
     background-position: center center;
@@ -557,9 +632,9 @@
   }
   .contacts__title {
     margin: 0;
-    margin-top: 80px;
     margin-bottom: 20px;
     padding: 0;
+    padding-top: 80px;
     text-align: center;
     font-family: Amatic SC;
     font-style: normal;
@@ -747,9 +822,6 @@
     border-bottom: 1px white solid;
     color: rgba(255, 255, 255, 0.7);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  .nav__link:hover {
-    text-decoration: underline;
   }
   .nav__link:active {
     text-decoration: underline;
@@ -997,6 +1069,7 @@
     padding: 0;
     height: 100%;
     width: 100%;
+    background-color: #EEEEEE;
   }
   .sightseens__wrapper {
     display: -webkit-box;
@@ -1011,12 +1084,14 @@
             justify-content: center;
     margin: 0;
     padding: 0;
+    padding-left: 130px;
+    padding-right: 130px;
   }
   .sightseens__title {
     margin: 0;
-    margin-top: 80px;
-    margin-bottom: 30px;
+    margin-bottom: 65px;
     padding: 0;
+    padding-top: 140px;
     text-align: center;
     font-family: Amatic SC;
     font-style: normal;
@@ -1024,22 +1099,37 @@
     font-size: 48px;
     color: #000000;
   }
-  .firstSight__image {
-    float: left;
+  .firstSight {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-    height: 33%;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+  .firstSight__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .firstSight__image {
+    margin: 0;
+    margin-right: 20px;
+    width: 30vw;
+    height: 33vh;
     border-radius: 20px;
     -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
   }
   .firstSight__title {
     margin: 0;
-    margin-top: 25px;
     margin-bottom: 25px;
-    margin-left: 30px;
     padding: 0;
     font-family: 'Roboto';
     font-style: normal;
@@ -1048,13 +1138,11 @@
     text-decoration: underline;
     color: #585858;
   }
-  .firstSight__description {
+  .firstSight__description1 {
     margin: 0;
-    margin-left: 30px;
-    margin-right: 15px;
-    margin-bottom: 45px;
+    margin-bottom: 15px;
     padding: 0;
-    padding-right: 5px;
+    width: 81%;
     font-family: Roboto;
     font-style: normal;
     font-weight: 400;
@@ -1062,22 +1150,51 @@
     line-height: 16px;
     color: #000000;
   }
-  .secondSight__image {
-    float: right;
+  .firstSight__description2 {
     margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-    height: 33%;
+    padding: 0;
+    width: 81%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+  }
+  .secondSight {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+  .secondSight__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .secondSight__image {
+    margin: 0;
+    width: 30vw;
+    height: 33vh;
     border-radius: 20px;
     -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
   }
   .secondSight__title {
     margin: 0;
-    margin-top: 25px;
     margin-bottom: 25px;
-    margin-left: 30px;
     padding: 0;
     font-family: 'Roboto';
     font-style: normal;
@@ -1086,13 +1203,11 @@
     text-decoration: underline;
     color: #585858;
   }
-  .secondSight__description {
+  .secondSight__description1 {
     margin: 0;
-    margin-left: 30px;
-    margin-right: 15px;
-    margin-bottom: 45px;
+    margin-bottom: 15px;
     padding: 0;
-    padding-right: 5px;
+    width: 81%;
     font-family: Roboto;
     font-style: normal;
     font-weight: 400;
@@ -1100,22 +1215,48 @@
     line-height: 16px;
     color: #000000;
   }
-  .thirdSight__image {
-    float: left;
+  .secondSight__description2 {
     margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-    height: 33%;
+    padding: 0;
+    width: 81%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+  }
+  .thirdSight {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    margin-bottom: 100px;
+    padding: 0;
+  }
+  .thirdSight__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .thirdSight__image {
+    margin: 0;
+    margin-right: 20px;
+    width: 30vw;
+    height: 33vh;
     border-radius: 20px;
     -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
   }
   .thirdSight__title {
     margin: 0;
-    margin-top: 25px;
     margin-bottom: 25px;
-    margin-left: 30px;
     padding: 0;
     font-family: 'Roboto';
     font-style: normal;
@@ -1124,12 +1265,22 @@
     text-decoration: underline;
     color: #585858;
   }
-  .thirdSight__description {
+  .thirdSight__description1 {
     margin: 0;
-    margin-left: 30px;
-    margin-right: 15px;
+    margin-bottom: 15px;
     padding: 0;
-    padding-right: 5px;
+    width: 81%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+  }
+  .thirdSight__description2 {
+    margin: 0;
+    padding: 0;
+    width: 81%;
     font-family: Roboto;
     font-style: normal;
     font-weight: 400;
@@ -1143,34 +1294,31 @@
     margin: 0;
     padding: 0;
   }
-  .tours--hidden {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
-  }
   .tours__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-bottom: 44px;
   }
   .tours__title {
     margin: 0;
-    margin-top: 80px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     padding: 0;
+    padding-top: 140px;
+    text-align: center;
     font-family: 'Amatic SC';
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 48px;
   }
   .tours__showMore {
     display: none;
@@ -1190,10 +1338,12 @@
         -ms-flex-pack: end;
             justify-content: flex-end;
     margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 20px;
     padding: 0;
-    height: 40%;
-    width: 33%;
+    height: 380px;
+    width: 380px;
   }
   .tour1__allInfo, .tour2__allInfo, .tour3__allInfo, .tour4__allInfo, .tour5__allInfo, .tour6__allInfo {
     margin: 0;
@@ -1310,23 +1460,22 @@
     padding: 0;
     height: 100vh;
     width: 100%;
+    background-color: #EEEEEE;
   }
   .contacts__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     margin: 0;
     padding: 0;
+    padding-left: 130px;
+    padding-right: 130px;
   }
   .contacts__title {
     margin: 0;
-    margin-top: 80px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 0;
+    padding-top: 140px;
     text-align: center;
     font-family: Amatic SC;
     font-style: normal;
@@ -1336,10 +1485,10 @@
   }
   .contacts__yMaps {
     margin: 0;
-    margin-top: 20px;
+    margin-left: 20px;
     padding: 0;
-    width: 100%;
-    height: 45vh;
+    width: 55vw;
+    height: 60vh;
   }
   .info {
     display: -webkit-box;
@@ -1350,7 +1499,9 @@
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 0;
-    padding: 20px;
+    margin-top: 40px;
+    padding: 0;
+    width: 33%;
   }
   .info__address, .info__phone, .info__email {
     display: -webkit-box;
@@ -1414,17 +1565,126 @@
   .footer {
     margin: 0;
     padding: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 15px;
-    padding-right: 20px;
     background-color: #242424;
   }
+  .footer__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    padding-top: 35px;
+    padding-bottom: 105px;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+  .footer__menuTitle {
+    margin: 0;
+    margin-bottom: 21px;
+    padding: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+  }
   .footer__menu {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .footer__menu .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .footer__menu .nav__welcome {
+    margin: 0;
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+  .footer__menu .nav__sightseens {
+    margin: 0;
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+  .footer__menu .nav__tours {
+    margin: 0;
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+  .footer__menu .nav__contacts {
+    margin: 0;
+    list-style-type: none;
+  }
+  .footer__menu .nav__link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  .footer__menu .nav__link:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+    opacity: 0.5;
+  }
+  .footer__contactsTitle {
+    margin: 0;
+    margin-bottom: 21px;
+    padding: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
   }
   .footer__contacts {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    margin-right: 160px;
+    padding: 0;
+    width: 30%;
+  }
+  .footer__address {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #E1E1E1;
+  }
+  .footer__email {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #E1E1E1;
   }
   .footer__copyright {
     margin: 0;

@@ -102,18 +102,59 @@ const closeModalButton = document.querySelector('.modalWindow__closeButton');
 const showMoreTours = document.querySelector('.tours__showMore');
 const hideToursButton = document.querySelector('.tours__hideTours');
 if(showMoreTours){
-  let hiddenTours = document.querySelector('.tours--hidden');
+  let hiddenTour3 = document.querySelector('.tour3');
+  let hiddenTour4 = document.querySelector('.tour4');
+  let hiddenTour5 = document.querySelector('.tour5');
+  let hiddenTour6 = document.querySelector('.tour6');
   showMoreTours.addEventListener('click', function(e){
-    hiddenTours.style.display = 'flex';
+    hiddenTour3.style.display = 'flex';
+    hiddenTour4.style.display = 'flex';
+    hiddenTour5.style.display = 'flex';
+    hiddenTour6.style.display = 'flex';
     showMoreTours.style.display = 'none';
     hideToursButton.style.display = 'block';
  });
 }
-if(hideToursButton){
-  let hiddenTours = document.querySelector('.tours--hidden');
-  hideToursButton.addEventListener('click', function(e){
-    hiddenTours.style.display = 'none';
-    showMoreTours.style.display = 'block';
-    hideToursButton.style.display = 'none';
- });
+  if(hideToursButton){
+    let hiddenTour3 = document.querySelector('.tour3');
+    let hiddenTour4 = document.querySelector('.tour4');
+    let hiddenTour5 = document.querySelector('.tour5');
+    let hiddenTour6 = document.querySelector('.tour6');
+    hideToursButton.addEventListener('click', function(e){
+      hiddenTour3.style.display = 'none';
+      hiddenTour4.style.display = 'none';
+      hiddenTour5.style.display = 'none';
+      hiddenTour6.style.display = 'none';
+      showMoreTours.style.display = 'block';
+      hideToursButton.style.display = 'none';
+  });
 }
+
+window.onbeforeunload = function () {
+ window.scrollTo(0, 0);
+}
+
+const firstSightMore = document.querySelector('.firstSight__info');
+const secondSightMore = document.querySelector('.secondSight__info');
+const thirdSightMore = document.querySelector('.thirdSight__info');
+
+  if(firstSightMore){
+    let firstSight = document.querySelector('.firstSight');
+    firstSightMore.addEventListener('click', function(){
+      firstSight.classList.toggle('firstSight--active');
+    });
+  }
+  if(secondSightMore){
+    let secondSight = document.querySelector('.secondSight');
+    secondSightMore.addEventListener('click', function(){
+      secondSight.classList.toggle('secondSight--active');
+    });
+  }
+  if(thirdSightMore){
+    let thirdSight = document.querySelector('.thirdSight');
+    thirdSightMore.addEventListener('click', function(){
+      thirdSight.classList.toggle('thirdSight--active');
+    });
+  }
+
+
