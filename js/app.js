@@ -1,45 +1,50 @@
-window.onscroll = function() {
+const openMenuButton = document.querySelector('.header__menuBurger');
+
+  if(openMenuButton){
+    let appBody = document.querySelector('.app');
+    let nav = document.querySelector('.nav');
+    let headerWrapper = document.querySelector('.header__wrapper');
+    let menuBurger = document.querySelector('.header__spanBurger');
+    openMenuButton.addEventListener('click', function(e){
+      openMenuButton.classList.toggle('header__menuBurger--open');
+      menuBurger.classList.toggle('header__spanBurger--open');
+      headerWrapper.classList.toggle('header__wrapper--active');
+      appBody.classList.toggle('app--blocked');
+       if(document.querySelector('.nav--active')){
+        nav.classList.remove('nav--active');
+      }else{
+        setTimeout(function() {
+          nav.classList.add('nav--active');
+       }, 350);
+      }
+   });
+  }
+
+ 
+  window.onscroll = function() {
     let scrolled = window.pageYOffset || document.documentElement.scrollTop; 
+    let headerWrapper = document.querySelector('.header__wrapper');
+    console.log(scrolled);
     if(scrolled !== 0){
-      document.querySelector('.header__wrapper').style.backgroundColor = 'rgba(17, 17, 17, 1)';
+      headerWrapper.classList.add('header__wrapper--scrolled');
+      headerWrapper.classList.remove('header__wrapper--notScrolled');
     }else{
-      document.querySelector('.header__wrapper').style.backgroundColor = 'rgba(17, 17, 17, 0)';
+      headerWrapper.classList.add('header__wrapper--notScrolled');
+      headerWrapper.classList.remove('header__wrapper--scrolled');
     };
+  
 };
 
-const openModalButton = document.querySelector('.header__menuBurger');
-const closeModalButton = document.querySelector('.modalWindow__closeButton');
-
-  if(openModalButton){
-    let modalWindow = document.querySelector('.modalWindow');
-    let appBody = document.querySelector('.app');
-    let header = document.querySelector('.header');
-    openModalButton.addEventListener('click', function(e){
-      modalWindow.classList.add('modalWindow--active');
-      header.style.visibility = 'hidden';
-      appBody.style.overflow = 'hidden';
-   });
-  }
-
-  if(closeModalButton){
-    let modalWindow = document.querySelector('.modalWindow');
-    let appBody = document.querySelector('.app');
-    let header = document.querySelector('.header');
-    closeModalButton.addEventListener('click', function(e){
-      modalWindow.classList.remove('modalWindow--active');
-      header.style.visibility = 'visible'
-      appBody.style.overflow = 'visible';
-   });
-  }
 
   const smoothLinks = document.querySelectorAll('.nav__link[href^="#"]');
   const smoothFollowArrow = document.querySelector('.welcome__arrowLink[href^="#"]');
   const smoothLogoLink = document.querySelector('.header__logoLink');
   for (let smoothLink of smoothLinks) {
       smoothLink.addEventListener('click', function (e) {
-        let modalWindow = document.querySelector('.modalWindow');
         let appBody = document.querySelector('.app');
-        let header = document.querySelector('.header');
+        let nav = document.querySelector('.nav');
+        let menuBurger = document.querySelector('.header__spanBurger');
+        let headerWrapper = document.querySelector('.header__wrapper');
           e.preventDefault();
           const id = smoothLink.getAttribute('href');
   
@@ -47,9 +52,11 @@ const closeModalButton = document.querySelector('.modalWindow__closeButton');
               behavior: 'smooth',
               block: 'start'
           });
-          modalWindow.classList.remove('modalWindow--active');
-          header.style.visibility = 'visible'
-          appBody.style.overflow = 'visible';
+          headerWrapper.classList.remove('header__wrapper--active');
+          appBody.classList.remove('app--blocked');
+          nav.classList.remove('nav--active');
+          menuBurger.classList.remove('header__spanBurger--open');
+          openMenuButton.classList.remove('header__menuBurger--open');
       });
   };
   smoothFollowArrow.addEventListener('click', function(e){
@@ -61,12 +68,21 @@ const closeModalButton = document.querySelector('.modalWindow__closeButton');
     });
   })
   smoothLogoLink.addEventListener('click', function(e){
+    let appBody = document.querySelector('.app');
+    let nav = document.querySelector('.nav');
+    let menuBurger = document.querySelector('.header__spanBurger');
+    let headerWrapper = document.querySelector('.header__wrapper');
     e.preventDefault();
     const id = smoothLogoLink.getAttribute('href');
     document.querySelector(id).scrollIntoView({
         behavior: 'smooth',
         block: 'start'
     });
+    headerWrapper.classList.remove('header__wrapper--active');
+    appBody.classList.remove('app--blocked');
+    nav.classList.remove('nav--active');
+    menuBurger.classList.remove('header__spanBurger--open');
+    openMenuButton.classList.remove('header__menuBurger--open');
   })
 
   window.addEventListener('scroll', event => {
@@ -156,5 +172,4 @@ const thirdSightMore = document.querySelector('.thirdSight__info');
       thirdSight.classList.toggle('thirdSight--active');
     });
   }
-
 

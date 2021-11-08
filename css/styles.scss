@@ -13,13 +13,36 @@
       justify-content: space-between;
       align-items: center;
       margin: 0;
-      padding: 20px;
+      padding: 0;
       width: 100%;
+      height: 100%;
+      transition: 0.5s;
+
+      &--scrolled{
+       background-color: rgba(17, 17, 17, 1);
+      }
+
+      &--notScrolled{
+       background-color: rgba(17, 17, 17, 0);
+      }
+      
+      &--active{
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+        background-color: rgba(17, 17, 17, 0.8);
+        transition: 0.3s;
+      }
     }
   
     &__logoLink{
+      align-self: flex-start;
       margin: 0;
-      margin-left: 5px;
+      margin-left: 28px;
+      margin-top: 19px;
+      margin-bottom: 19px;
       padding: 0;
       height: 43px;
       width: 48px;
@@ -36,40 +59,135 @@
   
     &__menuBurger{
       display: flex;
-      align-items: center;  
-      position: relative;
+      align-self: flex-end;
+      align-items: center;
       width: 34px;
       height: 34px;
       margin: 0;
-      margin-right: 32px;
-  
+      margin-bottom: 23px;
+      margin-right: 23px;
+      padding: 0;
+
     }
     &__spanBurger{
       display: block;
       position: absolute;
+      margin: 0;
+      padding: 0;
       width: 24px;
       height: 3px;
       background-color: #FFFFFF;
   
       &:after, &:before{
-        display: block;
         position: absolute;
-        width: 24px;
+        display: block;
+        left: 0;
+        width: 100%;
         height: 3px;
-        background-color: #FFFFFF;
-        content: '';
+        background-color: #fff;
+        content: "";
+        -webkit-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+        -webkit-transition-delay: 0.3s, 0;
+          transition-delay: 0.3s, 0;
       }
       &:after{
         bottom: 8px;
+        -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform;
       }
       &:before{
+        -webkit-transition-property: top, -webkit-transform;
+          transition-property: top, transform;
         top: 8px;
       }
-    }
+
+      &--open{
+        background: none;
+
+        &:after, &:before{
+          -webkit-transition-delay: 0, 0.3s;
+           transition-delay: 0, 0.3s;
+        }
+
+        &:after{
+          bottom: 0;
+          -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        &:before{
+          top: 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+        }
   
+      }
+    }
     .nav{
       display: none;
+      flex-direction: column;
+      align-self: center;
+      text-align: center;
+      margin: 0;
+      margin-right: 25px;
+      margin-bottom: 200px;
+      padding: 0;
+
+      &--active{
+        display: flex;
+      }
+    
+      &__welcome{
+        margin: 0;
+        margin-top: 15px;
+        list-style-type: none;
+      }
+    
+      &__sightseens{
+        margin: 0;
+        margin-top: 15px;
+        list-style-type: none;
+    
+      }
+    
+      &__tours{
+        margin: 0;
+        margin-top: 15px;
+        list-style-type: none;
+      }
+    
+      &__contacts{
+        margin: 0;
+        margin-top: 15px;
+        list-style-type: none;
+      }
+    
+      &__link{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: none;
+        color: #FFFFFF;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    
+        &--active{
+          list-style-type: none;
+          border-bottom: 1px rgba(255, 255, 255, 1) solid;
+          color: rgba(255, 255, 255, 0.7);
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+  
+        &:active{
+          text-decoration: underline;
+        }
+    
+      }
     }
+    
   }
   
   .welcome{
@@ -693,118 +811,18 @@
   
   }
   
-  .modalWindow{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #111111;
-    color: #FFFFFF;
-    opacity: 0.8;
-    z-index: 5;
-    top: 0;
-    visibility: hidden;
-    transition: 0.5s;
-    transform: translateY(-100%);
-  
-    &--active{
-      visibility: visible;
-      transform: translateY(0);
-    }
-    &__closeButton{
-      width: 20px;
-      height: 20px;
-    } 
-    &__spanClose {
-      display: flex;
-      justify-content: flex-end;
-      position: absolute;
-      margin: 0;
-      margin-right: 32px;
-      margin-bottom: 25px;
-      padding: 0;
-      width: 25px;
-      height: 25px;
-      right: 0;
-      bottom: 0;
-  
-      &:before, &:after {
-        position: absolute;
-        content: ' ';
-        height: 25px;
-        width: 2px;
-        background-color: #FFFFFF;
-      }
-      &:before {
-        transform: rotate(45deg);
-      }
-      &:after {
-        transform: rotate(-45deg);
-      }
-    }
-  }
+
   .app{
     margin: 0;
     padding: 0;
     width: 100%;
-  }
-  .nav{
-    margin: 0;
-    padding: 0;
-  
-    &__welcome{
-      margin: 0;
-      margin-top: 15px;
-      list-style-type: none;
-    }
-  
-    &__sightseens{
-      margin: 0;
-      margin-top: 15px;
-      list-style-type: none;
-  
-    }
-  
-    &__tours{
-      margin: 0;
-      margin-top: 15px;
-      list-style-type: none;
-    }
-  
-    &__contacts{
-      margin: 0;
-      margin-top: 15px;
-      list-style-type: none;
-    }
-  
-    &__link{
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      text-decoration: none;
-      color: #FFFFFF;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  
-      &--active{
-        list-style-type: none;
-        border-bottom: 1px rgba(255, 255, 255, 1) solid;
-        color: rgba(255, 255, 255, 0.7);
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      }
+    overflow: visible;
 
-      &:active{
-        text-decoration: underline;
-      }
-  
+    &--blocked{
+      overflow: hidden;
     }
   }
-  
+ 
   .footer{
     margin: 0;
     padding: 0;
@@ -851,6 +869,15 @@
     margin: 0;
     padding: 40px;
     width: 100%;
+    transition: 0.5s;
+
+    &--scrolled{
+      background-color: rgba(17, 17, 17, 1);
+     }
+
+     &--notScrolled{
+      background-color: rgba(17, 17, 17, 0);
+     }
   }
   
   &__logoLink{
@@ -1508,9 +1535,6 @@
   
   }
   
-  .modalWindow{
-  display: none;
-  }
   .app{
   margin: 0;
   padding: 0;
@@ -1521,6 +1545,7 @@
     margin: 0;
     padding: 0;
     background-color: #242424;
+
 
     &__wrapper{
       display: flex;
