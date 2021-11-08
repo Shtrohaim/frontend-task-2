@@ -5,17 +5,26 @@ const openMenuButton = document.querySelector('.header__menuBurger');
     let nav = document.querySelector('.nav');
     let headerWrapper = document.querySelector('.header__wrapper');
     let menuBurger = document.querySelector('.header__spanBurger');
+    let menuLoaded = false;
     openMenuButton.addEventListener('click', function(e){
-      openMenuButton.classList.toggle('header__menuBurger--open');
-      menuBurger.classList.toggle('header__spanBurger--open');
-      headerWrapper.classList.toggle('header__wrapper--active');
-      appBody.classList.toggle('app--blocked');
-       if(document.querySelector('.nav--active')){
-        nav.classList.remove('nav--active');
+      console.log(menuLoaded);
+      if(menuLoaded){
+        return;
       }else{
-        setTimeout(function() {
-          nav.classList.add('nav--active');
-       }, 350);
+        menuLoaded = true;
+        openMenuButton.classList.toggle('header__menuBurger--open');
+        menuBurger.classList.toggle('header__spanBurger--open');
+        headerWrapper.classList.toggle('header__wrapper--active');
+        appBody.classList.toggle('app--blocked');
+         if(document.querySelector('.nav--active')){
+          nav.classList.remove('nav--active');
+          menuLoaded = false;
+        }else{
+          setTimeout(function() {
+            nav.classList.add('nav--active');
+            menuLoaded = false;
+         }, 350);
+        }
       }
    });
   }
