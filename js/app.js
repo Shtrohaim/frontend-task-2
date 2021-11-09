@@ -7,7 +7,6 @@ const openMenuButton = document.querySelector('.header__menuBurger');
     let menuBurger = document.querySelector('.header__spanBurger');
     let menuLoaded = false;
     openMenuButton.addEventListener('click', function(e){
-      console.log(menuLoaded);
       if(menuLoaded){
         return;
       }else{
@@ -153,10 +152,6 @@ if(showMoreTours){
       showMoreTours.style.display = 'block';
       hideToursButton.style.display = 'none';
   });
-}
-
-window.onbeforeunload = function () {
- window.scrollTo(0, 0);
 }
 
 const firstSightMore = document.querySelector('.firstSight__info');
