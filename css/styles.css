@@ -1,14 +1,6 @@
 @charset "UTF-8";
 @media only screen and (min-width: 320px) and (max-width: 640px) {
   .header {
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 5;
-  }
-  .header__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -20,18 +12,20 @@
             align-items: center;
     margin: 0;
     padding: 0;
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 100%;
+    z-index: 5;
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  .header__wrapper--scrolled {
+  .header--scrolled {
     background-color: #111111;
   }
-  .header__wrapper--notScrolled {
+  .header--notScrolled {
     background-color: rgba(17, 17, 17, 0);
   }
-  .header__wrapper--active {
+  .header--active {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -43,7 +37,7 @@
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  .header__logoLink {
+  .header__logo-link {
     -ms-flex-item-align: start;
         align-self: flex-start;
     margin: 0;
@@ -61,7 +55,7 @@
     width: 100%;
     height: 100%;
   }
-  .header__menuBurger {
+  .header__menu-burger {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -77,7 +71,7 @@
     margin-right: 23px;
     padding: 0;
   }
-  .header__spanBurger {
+  .header__span-burger {
     display: block;
     position: absolute;
     margin: 0;
@@ -86,7 +80,7 @@
     height: 3px;
     background-color: #FFFFFF;
   }
-  .header__spanBurger:after, .header__spanBurger:before {
+  .header__span-burger:after, .header__span-burger:before {
     position: absolute;
     display: block;
     left: 0;
@@ -99,33 +93,33 @@
     -webkit-transition-delay: 0.3s, 0;
     transition-delay: 0.3s, 0;
   }
-  .header__spanBurger:after {
+  .header__span-burger:after {
     bottom: 8px;
     -webkit-transition-property: bottom, -webkit-transform;
     transition-property: bottom, -webkit-transform;
     transition-property: bottom, transform;
     transition-property: bottom, transform, -webkit-transform;
   }
-  .header__spanBurger:before {
+  .header__span-burger:before {
     -webkit-transition-property: top, -webkit-transform;
     transition-property: top, -webkit-transform;
     transition-property: top, transform;
     transition-property: top, transform, -webkit-transform;
     top: 8px;
   }
-  .header__spanBurger--open {
+  .header__span-burger--open {
     background: none;
   }
-  .header__spanBurger--open:after, .header__spanBurger--open:before {
+  .header__span-burger--open:after, .header__span-burger--open:before {
     -webkit-transition-delay: 0, 0.3s;
     transition-delay: 0, 0.3s;
   }
-  .header__spanBurger--open:after {
+  .header__span-burger--open:after {
     bottom: 0;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
-  .header__spanBurger--open:before {
+  .header__span-burger--open:before {
     top: 0;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -239,7 +233,7 @@
     font-size: 14px;
     color: rgba(255, 255, 255, 0.5);
   }
-  .welcome__arrowButton {
+  .welcome__arrow-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -255,7 +249,7 @@
     z-index: 4;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
-  .welcome__arrowButton:before, .welcome__arrowButton:after {
+  .welcome__arrow-button:before, .welcome__arrow-button:after {
     content: '';
     position: absolute;
     -webkit-box-sizing: border-box;
@@ -267,7 +261,7 @@
     -webkit-animation: followArrow 3s linear infinite;
             animation: followArrow 3s linear infinite;
   }
-  .welcome__arrowButton:after {
+  .welcome__arrow-button:after {
     -webkit-animation: followArrow 3s linear infinite -1.5s;
             animation: followArrow 3s linear infinite -1.5s;
   }
@@ -342,7 +336,7 @@
     font-size: 36px;
     color: #000000;
   }
-  .firstSight {
+  .sightseen {
     margin: 0;
     margin-bottom: 55px;
     padding: 0;
@@ -354,16 +348,16 @@
     -webkit-line-clamp: 11;
     -webkit-box-orient: vertical;
   }
-  .firstSight__info {
+  .sightseen__info {
     margin: 0;
     padding: 0;
     padding-left: 4px;
     padding-right: 8px;
   }
-  .firstSight--active {
+  .sightseen--active {
     display: block;
   }
-  .firstSight__image {
+  .sightseen__image {
     display: block;
     margin: 0;
     margin-left: auto;
@@ -374,7 +368,7 @@
     -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
   }
-  .firstSight__title {
+  .sightseen__title {
     margin: 0;
     margin-top: 23px;
     margin-bottom: 36px;
@@ -386,7 +380,7 @@
     text-decoration: underline;
     color: #585858;
   }
-  .firstSight__description1 {
+  .sightseen__description1 {
     margin: 0;
     margin-bottom: 10px;
     padding: 0;
@@ -397,138 +391,7 @@
     line-height: 16px;
     color: #000000;
   }
-  .firstSight__description2 {
-    margin: 0;
-    margin-right: 15px;
-    padding: 0;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-  }
-  .secondSight {
-    margin: 0;
-    margin-bottom: 55px;
-    padding: 0;
-    padding-left: 16px;
-    padding-right: 18px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 11;
-    -webkit-box-orient: vertical;
-  }
-  .secondSight__info {
-    margin: 0;
-    padding: 0;
-    padding-left: 4px;
-    padding-right: 8px;
-  }
-  .secondSight--active {
-    display: block;
-  }
-  .secondSight__image {
-    display: block;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 33%;
-    border-radius: 20px;
-    -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-  }
-  .secondSight__title {
-    margin: 0;
-    margin-top: 23px;
-    margin-bottom: 36px;
-    padding: 0;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    text-decoration: underline;
-    color: #585858;
-  }
-  .secondSight__description1 {
-    margin: 0;
-    margin-bottom: 10px;
-    padding: 0;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-  }
-  .secondSight__description2 {
-    margin: 0;
-    margin-right: 15px;
-    padding: 0;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-  }
-  .thirdSight {
-    margin: 0;
-    padding: 0;
-    padding-left: 16px;
-    padding-right: 18px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 11;
-    -webkit-box-orient: vertical;
-  }
-  .thirdSight--active {
-    display: block;
-  }
-  .thirdSight__info {
-    margin: 0;
-    padding: 0;
-    padding-left: 4px;
-    padding-right: 8px;
-  }
-  .thirdSight__image {
-    display: block;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 33%;
-    border-radius: 20px;
-    -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-  }
-  .thirdSight__title {
-    margin: 0;
-    margin-top: 23px;
-    margin-bottom: 36px;
-    padding: 0;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    text-decoration: underline;
-    color: #585858;
-  }
-  .thirdSight__description1 {
-    margin: 0;
-    margin-bottom: 10px;
-    padding: 0;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-  }
-  .thirdSight__description2 {
+  .sightseen__description2 {
     margin: 0;
     margin-right: 15px;
     padding: 0;
@@ -569,7 +432,7 @@
     font-weight: 400;
     font-size: 36px;
   }
-  .tours__showMore {
+  .tours__show-more {
     margin: 0;
     margin-top: 10px;
     padding: 0;
@@ -579,7 +442,7 @@
     font-size: 14px;
     color: #9F9F9F;
   }
-  .tours__hideTours {
+  .tours__hide-tours {
     display: none;
     margin: 0;
     margin-top: 10px;
@@ -590,13 +453,13 @@
     font-size: 14px;
     color: #9F9F9F;
   }
-  .allTours {
+  .all-tours {
     margin: 0;
     padding: 0;
     padding-left: 16px;
     padding-right: 18px;
   }
-  .tour1, .tour2, .tour3, .tour4, .tour5, .tour6 {
+  .tour {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -612,25 +475,29 @@
     padding: 0;
     height: 40vh;
     width: 100%;
+    background-image: url("../img/DJI_0210_1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
-  .tour1__allInfo, .tour2__allInfo, .tour3__allInfo, .tour4__allInfo, .tour5__allInfo, .tour6__allInfo {
+  .tour__all-info {
     margin: 0;
     padding: 0 25px 25px 25px;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(196, 196, 196, 0)), color-stop(23.96%, rgba(255, 255, 255, 0.67)), color-stop(78.65%, #EEEEEE));
     background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(255, 255, 255, 0.67) 23.96%, #EEEEEE 78.65%);
   }
-  .tour1__basicInfo, .tour2__basicInfo, .tour3__basicInfo, .tour4__basicInfo, .tour5__basicInfo, .tour6__basicInfo {
+  .tour__basic-info {
     margin: 0;
     padding: 0;
   }
-  .tour1__name, .tour2__name, .tour3__name, .tour4__name, .tour5__name, .tour6__name {
+  .tour__name {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     color: #000000;
   }
-  .tour1__description, .tour2__description, .tour3__description, .tour4__description, .tour5__description, .tour6__description {
+  .tour__description {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 200;
@@ -638,7 +505,7 @@
     line-height: 16px;
     color: #000000;
   }
-  .tour1__buyInfo, .tour2__buyInfo, .tour3__buyInfo, .tour4__buyInfo, .tour5__buyInfo, .tour6__buyInfo {
+  .tour__buy-info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -651,28 +518,28 @@
     margin: 0;
     padding: 0;
   }
-  .tour1__cost, .tour2__cost, .tour3__cost, .tour4__cost, .tour5__cost, .tour6__cost {
+  .tour__cost {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     color: #000000;
   }
-  .tour1__cost:before, .tour2__cost:before, .tour3__cost:before, .tour4__cost:before, .tour5__cost:before, .tour6__cost:before {
+  .tour__cost:before {
     content: 'от ';
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 200;
     font-size: 24px;
   }
-  .tour1__cost:after, .tour2__cost:after, .tour3__cost:after, .tour4__cost:after, .tour5__cost:after, .tour6__cost:after {
+  .tour__cost:after {
     content: ' р.';
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 200;
     font-size: 24px;
   }
-  .tour1__buyButton, .tour2__buyButton, .tour3__buyButton, .tour4__buyButton, .tour5__buyButton, .tour6__buyButton {
+  .tour__buy-button {
     margin: 0;
     padding: 0;
     border: 1px solid #C3B182;
@@ -686,46 +553,6 @@
     color: #C3B182;
     outline: 0;
     outline-offset: 0;
-  }
-  .tour1 {
-    background-image: url("../img/DJI_0210_1.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .tour2 {
-    background-image: url("../img/DJI_0210_1.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .tour3 {
-    display: none;
-    background-image: url("../img/DJI_0210_1.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .tour4 {
-    display: none;
-    background-image: url("../img/DJI_0210_1.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .tour5 {
-    display: none;
-    background-image: url("../img/DJI_0210_1.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .tour6 {
-    display: none;
-    background-image: url("../img/DJI_0210_1.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
   }
   .contacts {
     margin: 0;
@@ -756,7 +583,7 @@
     font-size: 48px;
     color: #000000;
   }
-  .contacts__yMaps {
+  .contacts__yandex-maps {
     margin: 0;
     margin-top: 20px;
     padding: 0;
@@ -798,14 +625,14 @@
     margin: 0;
     padding: 0;
   }
-  .info__addressLogo, .info__phoneLogo, .info__emailLogo {
+  .info__address-logo, .info__phone-logo, .info__email-logo {
     margin: 0;
     margin-right: 20px;
     padding: 0;
     width: 24px;
     height: 24px;
   }
-  .info__phoneNumbers {
+  .info__phone-numbers {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -816,12 +643,12 @@
     margin: 0;
     padding: 0;
   }
-  .info__phoneNumber1 {
+  .info__phone-number1 {
     margin: 0;
     margin-bottom: 15px;
     padding: 0;
   }
-  .info__phoneNumber1, .info__phoneNumber2, .info__emailAddress {
+  .info__phone-number1, .info__phone-number2, .info__email-address {
     text-decoration: none;
     color: #000000;
   }
@@ -843,7 +670,7 @@
     padding-right: 20px;
     background-color: #242424;
   }
-  .footer__menu {
+  .footer .footer-menu {
     display: none;
   }
   .footer__contacts {
@@ -863,14 +690,6 @@
 
 @media only screen and (min-width: 641px) {
   .header {
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 5;
-  }
-  .header__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -882,17 +701,20 @@
             align-items: center;
     margin: 0;
     padding: 40px;
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 5;
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  .header__wrapper--scrolled {
+  .header--scrolled {
     background-color: #111111;
   }
-  .header__wrapper--notScrolled {
+  .header--notScrolled {
     background-color: rgba(17, 17, 17, 0);
   }
-  .header__logoLink {
+  .header__logo-link {
     margin: 0;
     margin-left: 90px;
     padding: 0;
@@ -905,10 +727,10 @@
     width: 100%;
     height: 100%;
   }
-  .header__menuBurger {
+  .header__menu-burger {
     display: none;
   }
-  .header__spanBurger {
+  .header__span-burger {
     display: none;
   }
   .header .nav {
@@ -1008,7 +830,7 @@
     font-size: 14px;
     color: rgba(255, 255, 255, 0.5);
   }
-  .welcome__arrowButton {
+  .welcome__arrow-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1023,7 +845,7 @@
     height: 32px;
     z-index: 4;
   }
-  .welcome__arrowButton:before, .welcome__arrowButton:after {
+  .welcome__arrow-button:before, .welcome__arrow-button:after {
     content: '';
     position: absolute;
     -webkit-box-sizing: border-box;
@@ -1036,7 +858,7 @@
     -webkit-animation: followArrow 3s linear infinite;
             animation: followArrow 3s linear infinite;
   }
-  .welcome__arrowButton:after {
+  .welcome__arrow-button:after {
     -webkit-animation: followArrow 3s linear infinite -1.5s;
             animation: followArrow 3s linear infinite -1.5s;
   }
@@ -1109,7 +931,7 @@
     font-size: 48px;
     color: #000000;
   }
-  .firstSight {
+  .sightseen {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1119,7 +941,7 @@
     padding-left: 130px;
     padding-right: 130px;
   }
-  .firstSight__info {
+  .sightseen__info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1130,7 +952,7 @@
     margin: 0;
     padding: 0;
   }
-  .firstSight__image {
+  .sightseen__image {
     margin: 0;
     margin-right: 20px;
     width: 30vw;
@@ -1139,7 +961,7 @@
     -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
   }
-  .firstSight__title {
+  .sightseen__title {
     margin: 0;
     margin-bottom: 25px;
     padding: 0;
@@ -1150,7 +972,7 @@
     text-decoration: underline;
     color: #585858;
   }
-  .firstSight__description1 {
+  .sightseen__description1 {
     margin: 0;
     margin-bottom: 15px;
     padding: 0;
@@ -1162,7 +984,7 @@
     line-height: 16px;
     color: #000000;
   }
-  .firstSight__description2 {
+  .sightseen__description2 {
     margin: 0;
     padding: 0;
     width: 81%;
@@ -1173,7 +995,7 @@
     line-height: 16px;
     color: #000000;
   }
-  .secondSight {
+  #sightseen2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1187,7 +1009,7 @@
     padding-left: 130px;
     padding-right: 130px;
   }
-  .secondSight__info {
+  #sightseen2__info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1198,7 +1020,7 @@
     margin: 0;
     padding: 0;
   }
-  .secondSight__image {
+  #sightseen2__image {
     margin: 0;
     width: 30vw;
     height: 33vh;
@@ -1206,7 +1028,7 @@
     -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
   }
-  .secondSight__title {
+  #sightseen2__title {
     margin: 0;
     margin-bottom: 25px;
     padding: 0;
@@ -1217,7 +1039,7 @@
     text-decoration: underline;
     color: #585858;
   }
-  .secondSight__description1 {
+  #sightseen2__description1 {
     margin: 0;
     margin-bottom: 15px;
     padding: 0;
@@ -1229,71 +1051,7 @@
     line-height: 16px;
     color: #000000;
   }
-  .secondSight__description2 {
-    margin: 0;
-    padding: 0;
-    width: 81%;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-  }
-  .thirdSight {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0;
-    margin-bottom: 100px;
-    padding: 0;
-    padding-left: 130px;
-    padding-right: 130px;
-  }
-  .thirdSight__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 0;
-    padding: 0;
-  }
-  .thirdSight__image {
-    margin: 0;
-    margin-right: 20px;
-    width: 30vw;
-    height: 33vh;
-    border-radius: 20px;
-    -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-  }
-  .thirdSight__title {
-    margin: 0;
-    margin-bottom: 25px;
-    padding: 0;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    text-decoration: underline;
-    color: #585858;
-  }
-  .thirdSight__description1 {
-    margin: 0;
-    margin-bottom: 15px;
-    padding: 0;
-    width: 81%;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-  }
-  .thirdSight__description2 {
+  #sightseen2__description2 {
     margin: 0;
     padding: 0;
     width: 81%;
@@ -1321,13 +1079,13 @@
     font-weight: 400;
     font-size: 48px;
   }
-  .tours__showMore {
+  .tours__show-more {
     display: none;
   }
-  .tours__hideTours {
+  .tours__hide-tours {
     display: none;
   }
-  .allTours {
+  .all-tours {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1342,7 +1100,7 @@
     padding-right: 130px;
     padding-bottom: 44px;
   }
-  .tour1, .tour2, .tour3, .tour4, .tour5, .tour6 {
+  .tour {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1360,25 +1118,29 @@
     padding: 0;
     height: 380px;
     width: 380px;
+    background-image: url("../img/DJI_0210_1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
-  .tour1__allInfo, .tour2__allInfo, .tour3__allInfo, .tour4__allInfo, .tour5__allInfo, .tour6__allInfo {
+  .tour__all-info {
     margin: 0;
     padding: 0 25px 25px 25px;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(196, 196, 196, 0)), color-stop(23.96%, rgba(255, 255, 255, 0.67)), color-stop(78.65%, #EEEEEE));
     background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(255, 255, 255, 0.67) 23.96%, #EEEEEE 78.65%);
   }
-  .tour1__basicInfo, .tour2__basicInfo, .tour3__basicInfo, .tour4__basicInfo, .tour5__basicInfo, .tour6__basicInfo {
+  .tour__basic-info {
     margin: 0;
     padding: 0;
   }
-  .tour1__name, .tour2__name, .tour3__name, .tour4__name, .tour5__name, .tour6__name {
+  .tour__name {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     color: #000000;
   }
-  .tour1__description, .tour2__description, .tour3__description, .tour4__description, .tour5__description, .tour6__description {
+  .tour__description {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 200;
@@ -1386,7 +1148,7 @@
     line-height: 16px;
     color: #000000;
   }
-  .tour1__buyInfo, .tour2__buyInfo, .tour3__buyInfo, .tour4__buyInfo, .tour5__buyInfo, .tour6__buyInfo {
+  .tour__buy-info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1399,28 +1161,28 @@
     margin: 0;
     padding: 0;
   }
-  .tour1__cost, .tour2__cost, .tour3__cost, .tour4__cost, .tour5__cost, .tour6__cost {
+  .tour__cost {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     color: #000000;
   }
-  .tour1__cost:before, .tour2__cost:before, .tour3__cost:before, .tour4__cost:before, .tour5__cost:before, .tour6__cost:before {
+  .tour__cost:before {
     content: 'от ';
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 200;
     font-size: 24px;
   }
-  .tour1__cost:after, .tour2__cost:after, .tour3__cost:after, .tour4__cost:after, .tour5__cost:after, .tour6__cost:after {
+  .tour__cost:after {
     content: ' р.';
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 200;
     font-size: 24px;
   }
-  .tour1__buyButton, .tour2__buyButton, .tour3__buyButton, .tour4__buyButton, .tour5__buyButton, .tour6__buyButton {
+  .tour__buy-button {
     margin: 0;
     padding: 0;
     border: 1px solid #C3B182;
@@ -1435,57 +1197,12 @@
     outline: 0;
     outline-offset: 0;
   }
-  .tour1 {
-    background-image: url("../img/DJI_0210_1.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .tour2 {
-    background-image: url("../img/DJI_0210_1.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .tour3 {
-    background-image: url("../img/DJI_0210_1.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .tour4 {
-    background-image: url("../img/DJI_0210_1.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .tour5 {
-    background-image: url("../img/DJI_0210_1.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .tour6 {
-    background-image: url("../img/DJI_0210_1.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
   .contacts {
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100%;
     background-color: #EEEEEE;
-  }
-  .contacts__wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    padding-left: 130px;
-    padding-right: 130px;
   }
   .contacts__title {
     margin: 0;
@@ -1499,7 +1216,16 @@
     font-size: 48px;
     color: #000000;
   }
-  .contacts__yMaps {
+  .contacts .all-information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+  .contacts__yandex-maps {
     margin: 0;
     margin-left: 20px;
     padding: 0;
@@ -1543,14 +1269,14 @@
     margin: 0;
     padding: 0;
   }
-  .info__addressLogo, .info__phoneLogo, .info__emailLogo {
+  .info__address-logo, .info__phone-logo, .info__email-logo {
     margin: 0;
     margin-right: 20px;
     padding: 0;
     width: 24px;
     height: 24px;
   }
-  .info__phoneNumbers {
+  .info__phone-numbers {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1561,12 +1287,12 @@
     margin: 0;
     padding: 0;
   }
-  .info__phoneNumber1 {
+  .info__phone-number1 {
     margin: 0;
     margin-bottom: 15px;
     padding: 0;
   }
-  .info__phoneNumber1, .info__phoneNumber2, .info__emailAddress {
+  .info__phone-number1, .info__phone-number2, .info__email-address {
     text-decoration: none;
     color: #000000;
   }
@@ -1576,11 +1302,6 @@
     width: 100%;
   }
   .footer {
-    margin: 0;
-    padding: 0;
-    background-color: #242424;
-  }
-  .footer__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1588,12 +1309,16 @@
         justify-content: space-around;
     margin: 0;
     padding: 0;
-    padding-top: 35px;
-    padding-bottom: 105px;
-    padding-left: 130px;
-    padding-right: 130px;
+    background-color: #242424;
   }
-  .footer__menuTitle {
+  .footer .footer-menu {
+    margin: 0;
+    margin-top: 35px;
+    margin-bottom: 105px;
+    margin-left: 130px;
+    padding: 0;
+  }
+  .footer .footer-menu__title {
     margin: 0;
     margin-bottom: 21px;
     padding: 0;
@@ -1603,7 +1328,7 @@
     font-size: 14px;
     color: #FFFFFF;
   }
-  .footer__menu {
+  .footer .footer-menu .nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1614,37 +1339,26 @@
     margin: 0;
     padding: 0;
   }
-  .footer__menu .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 0;
-    padding: 0;
-  }
-  .footer__menu .nav__welcome {
+  .footer .footer-menu .nav__welcome {
     margin: 0;
     margin-bottom: 10px;
     list-style-type: none;
   }
-  .footer__menu .nav__sightseens {
+  .footer .footer-menu .nav__sightseens {
     margin: 0;
     margin-bottom: 10px;
     list-style-type: none;
   }
-  .footer__menu .nav__tours {
+  .footer .footer-menu .nav__tours {
     margin: 0;
     margin-bottom: 10px;
     list-style-type: none;
   }
-  .footer__menu .nav__contacts {
+  .footer .footer-menu .nav__contacts {
     margin: 0;
     list-style-type: none;
   }
-  .footer__menu .nav__link {
+  .footer .footer-menu .nav__link {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 200;
@@ -1652,12 +1366,12 @@
     text-decoration: none;
     color: #FFFFFF;
   }
-  .footer__menu .nav__link:hover {
+  .footer .footer-menu .nav__link:hover {
     text-decoration: underline;
     color: #FFFFFF;
     opacity: 0.5;
   }
-  .footer__contactsTitle {
+  .footer__contacts-title {
     margin: 0;
     margin-bottom: 21px;
     padding: 0;
@@ -1676,9 +1390,12 @@
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 0;
+    margin-left: 5px;
+    margin-top: 35px;
+    margin-bottom: 105px;
     margin-right: 160px;
     padding: 0;
-    width: 30%;
+    width: 25%;
   }
   .footer__address {
     margin: 0;
@@ -1701,6 +1418,9 @@
   }
   .footer__copyright {
     margin: 0;
+    margin-top: 35px;
+    margin-bottom: 105px;
+    margin-right: 130px;
     padding: 0;
     font-family: 'Roboto';
     font-style: normal;

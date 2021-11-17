@@ -1,20 +1,20 @@
 window.onload = function() {
-const openMenuButton = document.querySelector('.header__menuBurger');
+const openMenuButton = document.querySelector('.header__menu-burger');
 
   if(openMenuButton){
     let appBody = document.querySelector('.app');
     let nav = document.querySelector('.nav');
-    let headerWrapper = document.querySelector('.header__wrapper');
-    let menuBurger = document.querySelector('.header__spanBurger');
+    let header = document.querySelector('.header');
+    let menuBurger = document.querySelector('.header__span-burger');
     let menuLoaded = false;
     openMenuButton.addEventListener('click', function(e){
       if(menuLoaded){
         return;
       }else{
         menuLoaded = true;
-        openMenuButton.classList.toggle('header__menuBurger--open');
-        menuBurger.classList.toggle('header__spanBurger--open');
-        headerWrapper.classList.toggle('header__wrapper--active');
+        openMenuButton.classList.toggle('header__menu-burger--open');
+        menuBurger.classList.toggle('header__span-burger--open');
+        header.classList.toggle('header--active');
         appBody.classList.toggle('app--blocked');
          if(document.querySelector('.nav--active')){
           nav.classList.remove('nav--active');
@@ -23,7 +23,7 @@ const openMenuButton = document.querySelector('.header__menuBurger');
           setTimeout(function() {
             nav.classList.add('nav--active');
             menuLoaded = false;
-         }, 350);
+         }, 150);
         }
       }
    });
@@ -32,28 +32,28 @@ const openMenuButton = document.querySelector('.header__menuBurger');
  
   window.onscroll = function() {
     let scrolled = window.pageYOffset || document.documentElement.scrollTop; 
-    let headerWrapper = document.querySelector('.header__wrapper');
+    let header = document.querySelector('.header');
     console.log(scrolled);
     if(scrolled !== 0){
-      headerWrapper.classList.add('header__wrapper--scrolled');
-      headerWrapper.classList.remove('header__wrapper--notScrolled');
+      header.classList.add('header--scrolled');
+      header.classList.remove('header--notScrolled');
     }else{
-      headerWrapper.classList.add('header__wrapper--notScrolled');
-      headerWrapper.classList.remove('header__wrapper--scrolled');
+      header.classList.add('header--notScrolled');
+      header.classList.remove('header--scrolled');
     };
   
 };
 
 
   const smoothLinks = document.querySelectorAll('.nav__link[href^="#"]');
-  const smoothFollowArrow = document.querySelector('.welcome__arrowButton[href^="#"]');
-  const smoothLogoLink = document.querySelector('.header__logoLink');
+  const smoothFollowArrow = document.querySelector('.welcome__arrow-button[href^="#"]');
+  const smoothLogoLink = document.querySelector('.header__logo-link');
   for (let smoothLink of smoothLinks) {
       smoothLink.addEventListener('click', function (e) {
         let appBody = document.querySelector('.app');
         let nav = document.querySelector('.nav');
-        let menuBurger = document.querySelector('.header__spanBurger');
-        let headerWrapper = document.querySelector('.header__wrapper');
+        let menuBurger = document.querySelector('.header__span-burger');
+        let header = document.querySelector('.header');
           e.preventDefault();
           const id = smoothLink.getAttribute('href');
   
@@ -61,11 +61,11 @@ const openMenuButton = document.querySelector('.header__menuBurger');
               behavior: 'smooth',
               block: 'start'
           });
-          headerWrapper.classList.remove('header__wrapper--active');
+          header.classList.remove('header--active');
           appBody.classList.remove('app--blocked');
           nav.classList.remove('nav--active');
-          menuBurger.classList.remove('header__spanBurger--open');
-          openMenuButton.classList.remove('header__menuBurger--open');
+          menuBurger.classList.remove('header__span-burger--open');
+          openMenuButton.classList.remove('header__menu-burger--open');
       });
   };
   smoothFollowArrow.addEventListener('click', function(e){
@@ -79,19 +79,19 @@ const openMenuButton = document.querySelector('.header__menuBurger');
   smoothLogoLink.addEventListener('click', function(e){
     let appBody = document.querySelector('.app');
     let nav = document.querySelector('.nav');
-    let menuBurger = document.querySelector('.header__spanBurger');
-    let headerWrapper = document.querySelector('.header__wrapper');
+    let menuBurger = document.querySelector('.header__span-burger');
+    let header = document.querySelector('.header');
     e.preventDefault();
     const id = smoothLogoLink.getAttribute('href');
     document.querySelector(id).scrollIntoView({
         behavior: 'smooth',
         block: 'start'
     });
-    headerWrapper.classList.remove('header__wrapper--active');
+    header.classList.remove('header--active');
     appBody.classList.remove('app--blocked');
     nav.classList.remove('nav--active');
-    menuBurger.classList.remove('header__spanBurger--open');
-    openMenuButton.classList.remove('header__menuBurger--open');
+    menuBurger.classList.remove('header__span-burger--open');
+    openMenuButton.classList.remove('header__menu-burger--open');
   })
 
   window.addEventListener('scroll', event => {
@@ -124,13 +124,19 @@ const openMenuButton = document.querySelector('.header__menuBurger');
     
 });
 
-const showMoreTours = document.querySelector('.tours__showMore');
-const hideToursButton = document.querySelector('.tours__hideTours');
+const showMoreTours = document.querySelector('.tours__show-more');
+const hideToursButton = document.querySelector('.tours__hide-tours');
+const hiddenTour3 = document.getElementById('tour3');
+const hiddenTour4 = document.getElementById('tour4');
+const hiddenTour5 = document.getElementById('tour5');
+const hiddenTour6 = document.getElementById('tour6');
+if(window.screen.width < 641){
+  hiddenTour3.style.display = 'none';
+  hiddenTour4.style.display = 'none';
+  hiddenTour5.style.display = 'none';
+  hiddenTour6.style.display = 'none';
+}
 if(showMoreTours){
-  let hiddenTour3 = document.querySelector('.tour3');
-  let hiddenTour4 = document.querySelector('.tour4');
-  let hiddenTour5 = document.querySelector('.tour5');
-  let hiddenTour6 = document.querySelector('.tour6');
   showMoreTours.addEventListener('click', function(e){
     hiddenTour3.style.display = 'flex';
     hiddenTour4.style.display = 'flex';
@@ -141,10 +147,7 @@ if(showMoreTours){
  });
 }
   if(hideToursButton){
-    let hiddenTour3 = document.querySelector('.tour3');
-    let hiddenTour4 = document.querySelector('.tour4');
-    let hiddenTour5 = document.querySelector('.tour5');
-    let hiddenTour6 = document.querySelector('.tour6');
+
     hideToursButton.addEventListener('click', function(e){
       hiddenTour3.style.display = 'none';
       hiddenTour4.style.display = 'none';
@@ -155,26 +158,26 @@ if(showMoreTours){
   });
 }
 
-const firstSightMore = document.querySelector('.firstSight__info');
-const secondSightMore = document.querySelector('.secondSight__info');
-const thirdSightMore = document.querySelector('.thirdSight__info');
+const firstSightMore = document.getElementById('info1');
+const secondSightMore = document.getElementById('info2');
+const thirdSightMore = document.getElementById('info3');
 
   if(firstSightMore){
-    let firstSight = document.querySelector('.firstSight');
+    let firstSight = document.getElementById('sightseen1');
     firstSightMore.addEventListener('click', function(){
-      firstSight.classList.toggle('firstSight--active');
+      firstSight.classList.toggle('sightseen--active');
     });
   }
   if(secondSightMore){
-    let secondSight = document.querySelector('.secondSight');
+    let secondSight = document.getElementById('sightseen2');
     secondSightMore.addEventListener('click', function(){
-      secondSight.classList.toggle('secondSight--active');
+      secondSight.classList.toggle('sightseen--active');
     });
   }
   if(thirdSightMore){
-    let thirdSight = document.querySelector('.thirdSight');
+    let thirdSight = document.getElementById('sightseen3');
     thirdSightMore.addEventListener('click', function(){
-      thirdSight.classList.toggle('thirdSight--active');
+      thirdSight.classList.toggle('sightseen--active');
     });
   }
   window.onbeforeunload = function () {

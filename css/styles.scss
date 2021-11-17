@@ -1,43 +1,37 @@
 @media only screen and (min-width : 320px) and (max-width : 640px) {
 
   .header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin: 0;
       padding: 0;
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 5;
-  
-    &__wrapper{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
       transition: 0.5s;
 
       &--scrolled{
-       background-color: rgba(17, 17, 17, 1);
-      }
-
-      &--notScrolled{
-       background-color: rgba(17, 17, 17, 0);
-      }
-      
-      &--active{
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        width: 100%;
-        align-items: center;
-        background-color: rgba(17, 17, 17, 0.8);
-        transition: 0.3s;
-      }
-    }
+        background-color: rgba(17, 17, 17, 1);
+       }
+ 
+       &--notScrolled{
+        background-color: rgba(17, 17, 17, 0);
+       }
+       
+       &--active{
+         margin: 0;
+         padding: 0;
+         height: 100vh;
+         width: 100%;
+         align-items: center;
+         background-color: rgba(17, 17, 17, 0.8);
+         transition: 0.3s;
+       }
   
-    &__logoLink{
+  
+    &__logo-link{
       align-self: flex-start;
       margin: 0;
       margin-left: 28px;
@@ -57,7 +51,7 @@
       height: 100%;
     }
   
-    &__menuBurger{
+    &__menu-burger{
       display: flex;
       align-self: flex-end;
       align-items: center;
@@ -69,7 +63,7 @@
       padding: 0;
 
     }
-    &__spanBurger{
+    &__span-burger{
       display: block;
       position: absolute;
       margin: 0;
@@ -235,7 +229,7 @@
       color: rgba(255, 255, 255, 0.5);
     }
   
-    &__arrowButton{
+    &__arrow-button{
       display: flex;
       position: absolute;
       margin: 0;
@@ -307,7 +301,7 @@
     }
   }
   
-  .firstSight{
+  .sightseen{
     margin: 0;
     margin-bottom: 55px;
     padding: 0;
@@ -328,150 +322,6 @@
 
     &--active{
       display: block;
-    }
-
-  
-    &__image{
-      display: block;
-      margin: 0;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      height: 33%;
-      border-radius: 20px;
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-    }
-  
-    &__title{
-      margin: 0;
-      margin-top: 23px;
-      margin-bottom: 36px;
-      padding: 0;
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 24px;
-      text-decoration: underline;
-      color: #585858;
-    }
-  
-    &__description1{
-      margin: 0;
-      margin-bottom: 10px;
-      padding: 0;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 16px;
-      color: #000000;
-    }
-
-    &__description2{
-      margin: 0;
-      margin-right: 15px;
-      padding: 0;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 16px;
-      color: #000000;
-    }
-  }
-  
-  .secondSight{
-    margin: 0;
-    margin-bottom: 55px;
-    padding: 0;
-    padding-left: 16px;
-    padding-right: 18px;
-  	overflow: hidden;
-	  text-overflow: ellipsis;
-    display: -webkit-box;
-	  -webkit-line-clamp: 11;
-	  -webkit-box-orient: vertical;
-
-    &__info{
-      margin: 0;
-      padding: 0;
-      padding-left: 4px;
-      padding-right: 8px;
-    }
-
-    &--active{
-      display: block;
-    }
-  
-    &__image{
-      display: block;
-      margin: 0;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      height: 33%;
-      border-radius: 20px;
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-    }
-  
-    &__title{
-      margin: 0;
-      margin-top: 23px;
-      margin-bottom: 36px;
-      padding: 0;
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 24px;
-      text-decoration: underline;
-      color: #585858;
-    }
-  
-    &__description1{
-      margin: 0;
-      margin-bottom: 10px;
-      padding: 0;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 16px;
-      color: #000000;
-    }
-
-    &__description2{
-      margin: 0;
-      margin-right: 15px;
-      padding: 0;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 16px;
-      color: #000000;
-    }
-  }
-  
-  .thirdSight{
-    margin: 0;
-    padding: 0;
-    padding-left: 16px;
-    padding-right: 18px;
-  	overflow: hidden;
-	  text-overflow: ellipsis;
-    display: -webkit-box;
-	  -webkit-line-clamp: 11;
-	  -webkit-box-orient: vertical;
-
-    &--active{
-      display: block;
-    }
-
-    &__info{
-      margin: 0;
-      padding: 0;
-      padding-left: 4px;
-      padding-right: 8px;
     }
 
   
@@ -547,7 +397,7 @@
   
     }
   
-    &__showMore{
+    &__show-more{
       margin: 0;
       margin-top: 10px;
       padding: 0;
@@ -558,7 +408,7 @@
       color: #9F9F9F;
     }
   
-    &__hideTours{
+    &__hide-tours{
       display: none;
       margin: 0;
       margin-top: 10px;
@@ -572,14 +422,14 @@
   
   }
 
-  .allTours{
+  .all-tours{
     margin: 0;
     padding: 0;
     padding-left: 16px;
     padding-right: 18px;
   }
 
-  .tour1, .tour2, .tour3, .tour4, .tour5, .tour6{
+  .tour{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -588,14 +438,18 @@
     padding: 0;
     height: 40vh;
     width: 100%;
+    background-image: url('../img/DJI_0210_1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   
-    &__allInfo{
+    &__all-info{
       margin: 0;
       padding: 0 25px 25px 25px;
       background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(255, 255, 255, 0.67) 23.96%, #EEEEEE 78.65%);
     }
   
-    &__basicInfo{
+    &__basic-info{
       margin: 0;
       padding: 0;
   
@@ -618,7 +472,7 @@
       color: #000000;
     }
   
-    &__buyInfo{
+    &__buy-info{
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -652,7 +506,7 @@
       
     }
   
-    &__buyButton{
+    &__buy-button{
       margin: 0;
       padding: 0;
       border: 1px solid #C3B182;
@@ -669,48 +523,6 @@
     }
   
   
-  }
-  
-  .tour1{
-    background-image: url('../img/DJI_0210_1.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .tour2{
-    background-image: url('../img/DJI_0210_1.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .tour3{
-    display: none;
-    background-image: url('../img/DJI_0210_1.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    
-  }
-  .tour4{
-    display: none;
-    background-image: url('../img/DJI_0210_1.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .tour5{
-    display: none;
-    background-image: url('../img/DJI_0210_1.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .tour6{
-    display: none;
-    background-image: url('../img/DJI_0210_1.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
   }
   
   .contacts{
@@ -739,7 +551,7 @@
       color: #000000;
     }
   
-    &__yMaps{
+    &__yandex-maps{
       margin: 0;
       margin-top: 20px;
       padding: 0;
@@ -779,7 +591,7 @@
       padding: 0;
   
     }
-    &__addressLogo, &__phoneLogo, &__emailLogo{
+    &__address-logo, &__phone-logo, &__email-logo{
       margin: 0;
       margin-right: 20px;
       padding: 0;
@@ -787,19 +599,19 @@
       height: 24px;
     }
   
-    &__phoneNumbers{
+    &__phone-numbers{
       display: flex;
       flex-direction: column;
       margin: 0;
       padding: 0;
     }
-    &__phoneNumber1{
+    &__phone-number1{
       margin: 0;
       margin-bottom: 15px;
       padding: 0;
     }
   
-    &__phoneNumber1, &__phoneNumber2, &__emailAddress{
+    &__phone-number1, &__phone-number2, &__email-address{
       text-decoration: none;
       color: #000000;
     }
@@ -827,7 +639,7 @@
     padding-right: 20px;
     background-color: #242424;
   
-    &__menu{
+    .footer-menu{
       display: none;
     }
   
@@ -850,20 +662,15 @@
 @media only screen and (min-width : 641px){
 
   .header{
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 5;
-  
-  &__wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0;
     padding: 40px;
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 5;
     transition: 0.5s;
 
     &--scrolled{
@@ -873,9 +680,8 @@
      &--notScrolled{
       background-color: rgba(17, 17, 17, 0);
      }
-  }
   
-  &__logoLink{
+  &__logo-link{
     margin: 0;
     margin-left: 90px;
     padding: 0;
@@ -891,11 +697,11 @@
     height: 100%;
   }
   
-  &__menuBurger{
+  &__menu-burger{
     display: none;
   
   }
-  &__spanBurger{
+  &__span-burger{
     display: none;
   }
   
@@ -1001,7 +807,7 @@
     color: rgba(255, 255, 255, 0.5);
   }
   
-  &__arrowButton{
+  &__arrow-button{
     display: flex;
     position: absolute;
     margin: 0;
@@ -1075,7 +881,7 @@
   }
   }
   
-  .firstSight{
+  .sightseen{
     display: flex;
     margin: 0;
     margin-bottom: 50px;
@@ -1135,8 +941,7 @@
       color: #000000;
   }
 }
-  
-  .secondSight{
+  #sightseen2{
     display: flex;
     flex-direction: row-reverse;
     margin: 0;
@@ -1154,67 +959,6 @@
   
     &__image{
       margin: 0;
-      width: 30vw;
-      height: 33vh;
-      border-radius: 20px;
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-    }
-  
-    &__title{
-      margin: 0;
-      margin-bottom: 25px;
-      padding: 0;
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 24px;
-      text-decoration: underline;
-      color: #585858;
-    }
-  
-    &__description1{
-      margin: 0;
-      margin-bottom: 15px;
-      padding: 0;
-      width: 81%;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 16px;
-      color: #000000;
-    }
-    &__description2{
-      margin: 0;
-      padding: 0;
-      width: 81%;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 16px;
-      color: #000000;
-  }
-  }
-  
-  .thirdSight{
-    display: flex;
-    margin: 0;
-    margin-bottom: 100px;
-    padding: 0;
-    padding-left: 130px;
-    padding-right: 130px;
-
-    &__info{
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      padding: 0;
-    }
-  
-    &__image{
-      margin: 0;
-      margin-right: 20px;
       width: 30vw;
       height: 33vh;
       border-radius: 20px;
@@ -1277,17 +1021,17 @@
   
   }
   
-  &__showMore{
+  &__show-more{
     display: none;
   }
   
-  &__hideTours{
+  &__hide-tours{
     display: none;
   }
   
   }
   
-  .allTours{
+  .all-tours{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -1297,7 +1041,7 @@
     padding-right: 130px;
     padding-bottom: 44px;
   }
-  .tour1, .tour2, .tour3, .tour4, .tour5, .tour6{
+  .tour{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1308,14 +1052,18 @@
   padding: 0;
   height: 380px;
   width: 380px;
+  background-image: url('../img/DJI_0210_1.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   
-  &__allInfo{
+  &__all-info{
     margin: 0;
     padding: 0 25px 25px 25px;
     background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(255, 255, 255, 0.67) 23.96%, #EEEEEE 78.65%);
   }
   
-  &__basicInfo{
+  &__basic-info{
     margin: 0;
     padding: 0;
   
@@ -1338,7 +1086,7 @@
     color: #000000;
   }
   
-  &__buyInfo{
+  &__buy-info{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1372,7 +1120,7 @@
     
   }
   
-  &__buyButton{
+  &__buy-button{
     margin: 0;
     padding: 0;
     border: 1px solid #C3B182;
@@ -1391,58 +1139,14 @@
   
   }
   
-  .tour1{
-  background-image: url('../img/DJI_0210_1.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  }
-  .tour2{
-  background-image: url('../img/DJI_0210_1.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  }
-  .tour3{
-  background-image: url('../img/DJI_0210_1.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  
-  }
-  .tour4{
-  background-image: url('../img/DJI_0210_1.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  }
-  .tour5{
-  background-image: url('../img/DJI_0210_1.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  }
-  .tour6{
-  background-image: url('../img/DJI_0210_1.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  }
   
   .contacts{
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100%;
-  background-color: #EEEEEE;
-  
-  &__wrapper{
-    display: flex;
     margin: 0;
     padding: 0;
-    padding-left: 130px;
-    padding-right: 130px;
-  }
+    height: 100vh;
+    width: 100%;
+    background-color: #EEEEEE;
+  
   
   &__title{
     margin: 0;
@@ -1456,8 +1160,14 @@
     font-size: 48px;
     color: #000000;
   }
-  
-  &__yMaps{
+  .all-information{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+  &__yandex-maps{
     margin: 0;
     margin-left: 20px;
     padding: 0;
@@ -1499,7 +1209,7 @@
     padding: 0;
   
   }
-  &__addressLogo, &__phoneLogo, &__emailLogo{
+  &__address-logo, &__phone-logo, &__email-logo{
     margin: 0;
     margin-right: 20px;
     padding: 0;
@@ -1507,19 +1217,19 @@
     height: 24px;
   }
   
-  &__phoneNumbers{
+  &__phone-numbers{
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
   }
-  &__phoneNumber1{
+  &__phone-number1{
     margin: 0;
     margin-bottom: 15px;
     padding: 0;
   }
   
-  &__phoneNumber1, &__phoneNumber2, &__emailAddress{
+  &__phone-number1, &__phone-number2, &__email-address{
     text-decoration: none;
     color: #000000;
   }
@@ -1533,24 +1243,21 @@
   }
   
   .footer{
+    display: flex;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
     background-color: #242424;
 
+  .footer-menu{
+    margin: 0;
+    margin-top: 35px;
+    margin-bottom: 105px;
+    margin-left: 130px;
+    padding: 0;
 
-    &__wrapper{
-      display: flex;
-      justify-content: space-around;
-      margin: 0;
-      padding: 0;
-      padding-top: 35px;
-      padding-bottom: 105px;
-      padding-left: 130px;
-      padding-right: 130px;
 
-    }
-  
-    &__menuTitle{
+    &__title{
       margin: 0;
       margin-bottom: 21px;
       padding: 0;
@@ -1560,12 +1267,6 @@
       font-size: 14px;
       color: #FFFFFF;
     }
-
-    &__menu{
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      padding: 0;
 
       .nav{
         display: flex;
@@ -1612,9 +1313,10 @@
           }
         }  
       }
-    }
+  }
+   
   
-    &__contactsTitle{
+    &__contacts-title{
       margin: 0;
       margin-bottom: 21px;
       padding: 0;
@@ -1629,9 +1331,12 @@
       display: flex;
       flex-direction: column;
       margin: 0;
+      margin-left: 5px;
+      margin-top: 35px;
+      margin-bottom: 105px;
       margin-right: 160px;
       padding: 0;
-      width: 30%;
+      width: 25%;
     
     }
 
@@ -1659,6 +1364,9 @@
   
     &__copyright{
       margin: 0;
+      margin-top: 35px;
+      margin-bottom: 105px;
+      margin-right: 130px;
       padding: 0;
       font-family: 'Roboto';
       font-style: normal;
