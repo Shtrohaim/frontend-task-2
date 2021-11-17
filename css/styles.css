@@ -239,24 +239,23 @@
     font-size: 14px;
     color: rgba(255, 255, 255, 0.5);
   }
-  .welcome__arrowLink {
+  .welcome__arrowButton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     position: absolute;
     margin: 0;
-    padding: 0;
     margin-bottom: 50px;
+    padding: 0;
+    border: 0;
     bottom: 0;
     width: 32px;
     height: 32px;
+    background: none;
     z-index: 4;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
-  .welcome__followArrow {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .welcome__followArrow:before, .welcome__followArrow:after {
+  .welcome__arrowButton:before, .welcome__arrowButton:after {
     content: '';
     position: absolute;
     -webkit-box-sizing: border-box;
@@ -268,7 +267,7 @@
     -webkit-animation: followArrow 3s linear infinite;
             animation: followArrow 3s linear infinite;
   }
-  .welcome__followArrow:after {
+  .welcome__arrowButton:after {
     -webkit-animation: followArrow 3s linear infinite -1.5s;
             animation: followArrow 3s linear infinite -1.5s;
   }
@@ -313,12 +312,6 @@
     }
   }
   .sightseens {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-  }
-  .sightseens__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -334,8 +327,8 @@
             align-items: center;
     margin: 0;
     padding: 0;
-    padding-left: 16px;
-    padding-right: 18px;
+    height: 100%;
+    width: 100%;
   }
   .sightseens__title {
     margin: 0;
@@ -353,6 +346,8 @@
     margin: 0;
     margin-bottom: 55px;
     padding: 0;
+    padding-left: 16px;
+    padding-right: 18px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -417,6 +412,8 @@
     margin: 0;
     margin-bottom: 55px;
     padding: 0;
+    padding-left: 16px;
+    padding-right: 18px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -480,6 +477,8 @@
   .thirdSight {
     margin: 0;
     padding: 0;
+    padding-left: 16px;
+    padding-right: 18px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -541,12 +540,6 @@
     color: #000000;
   }
   .tours {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .tours__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -562,8 +555,8 @@
             align-items: center;
     margin: 0;
     padding: 0;
-    padding-left: 16px;
-    padding-right: 18px;
+    height: 100%;
+    width: 100%;
   }
   .tours__title {
     margin: 0;
@@ -597,6 +590,12 @@
     font-size: 14px;
     color: #9F9F9F;
   }
+  .allTours {
+    margin: 0;
+    padding: 0;
+    padding-left: 16px;
+    padding-right: 18px;
+  }
   .tour1, .tour2, .tour3, .tour4, .tour5, .tour6 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -611,7 +610,7 @@
     margin: 0;
     margin-bottom: 20px;
     padding: 0;
-    height: 40%;
+    height: 40vh;
     width: 100%;
   }
   .tour1__allInfo, .tour2__allInfo, .tour3__allInfo, .tour4__allInfo, .tour5__allInfo, .tour6__allInfo {
@@ -1009,35 +1008,35 @@
     font-size: 14px;
     color: rgba(255, 255, 255, 0.5);
   }
-  .welcome__arrowLink {
+  .welcome__arrowButton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     position: absolute;
     margin: 0;
-    padding: 0;
     margin-bottom: 50px;
+    padding: 0;
+    border: 0;
     bottom: 0;
+    background: none;
     width: 32px;
     height: 32px;
     z-index: 4;
   }
-  .welcome__followArrow {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .welcome__followArrow:before, .welcome__followArrow:after {
+  .welcome__arrowButton:before, .welcome__arrowButton:after {
     content: '';
     position: absolute;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 100%;
     height: 100%;
+    cursor: pointer;
     border-left: 2px solid #FFFFFF;
     border-bottom: 2px solid #FFFFFF;
     -webkit-animation: followArrow 3s linear infinite;
             animation: followArrow 3s linear infinite;
   }
-  .welcome__followArrow:after {
+  .welcome__arrowButton:after {
     -webkit-animation: followArrow 3s linear infinite -1.5s;
             animation: followArrow 3s linear infinite -1.5s;
   }
@@ -1082,13 +1081,6 @@
     }
   }
   .sightseens {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #EEEEEE;
-  }
-  .sightseens__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1101,8 +1093,9 @@
             justify-content: center;
     margin: 0;
     padding: 0;
-    padding-left: 130px;
-    padding-right: 130px;
+    height: 100%;
+    width: 100%;
+    background-color: #EEEEEE;
   }
   .sightseens__title {
     margin: 0;
@@ -1123,6 +1116,8 @@
     margin: 0;
     margin-bottom: 50px;
     padding: 0;
+    padding-left: 130px;
+    padding-right: 130px;
   }
   .firstSight__info {
     display: -webkit-box;
@@ -1189,6 +1184,8 @@
     margin: 0;
     margin-bottom: 50px;
     padding: 0;
+    padding-left: 130px;
+    padding-right: 130px;
   }
   .secondSight__info {
     display: -webkit-box;
@@ -1250,6 +1247,8 @@
     margin: 0;
     margin-bottom: 100px;
     padding: 0;
+    padding-left: 130px;
+    padding-right: 130px;
   }
   .thirdSight__info {
     display: -webkit-box;
@@ -1306,25 +1305,10 @@
     color: #000000;
   }
   .tours {
+    margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .tours__wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    padding-left: 130px;
-    padding-right: 130px;
-    padding-bottom: 44px;
   }
   .tours__title {
     margin: 0;
@@ -1342,6 +1326,21 @@
   }
   .tours__hideTours {
     display: none;
+  }
+  .allTours {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-bottom: 44px;
   }
   .tour1, .tour2, .tour3, .tour4, .tour5, .tour6 {
     display: -webkit-box;

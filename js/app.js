@@ -1,3 +1,4 @@
+window.onload = function() {
 const openMenuButton = document.querySelector('.header__menuBurger');
 
   if(openMenuButton){
@@ -45,7 +46,7 @@ const openMenuButton = document.querySelector('.header__menuBurger');
 
 
   const smoothLinks = document.querySelectorAll('.nav__link[href^="#"]');
-  const smoothFollowArrow = document.querySelector('.welcome__arrowLink[href^="#"]');
+  const smoothFollowArrow = document.querySelector('.welcome__arrowButton[href^="#"]');
   const smoothLogoLink = document.querySelector('.header__logoLink');
   for (let smoothLink of smoothLinks) {
       smoothLink.addEventListener('click', function (e) {
@@ -176,4 +177,7 @@ const thirdSightMore = document.querySelector('.thirdSight__info');
       thirdSight.classList.toggle('thirdSight--active');
     });
   }
-
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+}
