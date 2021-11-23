@@ -125,37 +125,23 @@ const openMenuButton = document.querySelector('.header__menu-burger');
 });
 
 const showMoreTours = document.querySelector('.tours__show-more');
-const hideToursButton = document.querySelector('.tours__hide-tours');
-const hiddenTour3 = document.getElementById('tour3');
-const hiddenTour4 = document.getElementById('tour4');
-const hiddenTour5 = document.getElementById('tour5');
-const hiddenTour6 = document.getElementById('tour6');
-if(window.screen.width < 641){
-  hiddenTour3.style.display = 'none';
-  hiddenTour4.style.display = 'none';
-  hiddenTour5.style.display = 'none';
-  hiddenTour6.style.display = 'none';
-}
-if(showMoreTours){
-  showMoreTours.addEventListener('click', function(e){
-    hiddenTour3.style.display = 'flex';
-    hiddenTour4.style.display = 'flex';
-    hiddenTour5.style.display = 'flex';
-    hiddenTour6.style.display = 'flex';
-    showMoreTours.style.display = 'none';
-    hideToursButton.style.display = 'block';
- });
-}
-  if(hideToursButton){
 
-    hideToursButton.addEventListener('click', function(e){
-      hiddenTour3.style.display = 'none';
-      hiddenTour4.style.display = 'none';
-      hiddenTour5.style.display = 'none';
-      hiddenTour6.style.display = 'none';
-      showMoreTours.style.display = 'block';
-      hideToursButton.style.display = 'none';
-  });
+if(showMoreTours){
+
+  const allTours = document.querySelectorAll('.all-tours');
+
+  showMoreTours.addEventListener('click', (e) => handleToggleItemsButtonClick(allTours[0], e));
+}
+ 
+function handleToggleItemsButtonClick(allToursItem, pointerEvent){
+  if(pointerEvent.currentTarget.innerText === 'Больше туров'){
+
+    pointerEvent.currentTarget.innerText = 'Меньше туров';
+    allToursItem.classList.add('all-tours--all-visible');
+  } else{
+    pointerEvent.currentTarget.innerText = 'Больше туров';
+    allToursItem.classList.remove('all-tours--all-visible');
+  }
 }
 
 const firstSightMore = document.getElementById('info1');
@@ -183,4 +169,7 @@ const thirdSightMore = document.getElementById('info3');
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
+  
 }
+
+
